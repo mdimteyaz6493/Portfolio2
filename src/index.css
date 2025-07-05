@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Default light mode */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #0a0a23;
+  color: #ffffff;
+}
+
+/* Example navbar color override */
+body.dark .navbar {
+  background-color: #0a0a23;
+}
+
+body.light .navbar {
+  background-color: #f0f0f0;
+}

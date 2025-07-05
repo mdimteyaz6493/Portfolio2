@@ -4,17 +4,25 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #0a0a23;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 60px;
+}
+.navbar.dark{
+  background-color: #121c3c;
+  color: white;
 }
 
 .logo span {
   font-size: 24px;
   font-weight: bold;
-  color: #00d4ff;
+  color:#263879;
+}
+.navbar.dark .logo span{
+  color:#ffffff;
 }
 
 /* Hamburger Button */
@@ -29,9 +37,12 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: white;
+  background: rgb(0, 0, 0);
   transition: 0.3s ease;
   border-radius: 2px;
+}
+.navbar.dark .hamburger span{
+  background-color: white;
 }
 
 /* Animation: Turn into 'X' */
@@ -54,16 +65,23 @@
 
 .menu li a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: 500;
   transition: 0.2s ease;
 }
+.navbar.dark .menu li a{
+ color: rgb(196, 224, 247);
+}
 
 .menu li a:hover {
-  color: #00d4ff;
+  color: #1b1956;
   transform: scale(1.1);
 }
+.navbar.dark .menu li a:hover{
+ color: white;
+}
+
 
 /* Responsive: Sidebar + Overlay */
 @media (max-width: 768px) {
@@ -74,20 +92,20 @@
   .menu {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -100%;
     height: 100%;
     width: 250px;
-    background-color: #0a0a23;
+    background-color: #f9e6e6;
     flex-direction: column;
     align-items: flex-start;
     padding: 60px 20px;
     gap: 20px;
-    transition: right 0.3s ease;
+    transition: left  0.3s ease;
     z-index: 1050;
   }
 
   .menu.open {
-    right: 0;
+    left: 0;
   }
 
   .menu li a {
