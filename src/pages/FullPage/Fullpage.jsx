@@ -5,6 +5,7 @@ import Skills from '../Skills/Skills'
 import Home from "../Home/Home"
 import Education from '../Educations/Education'
 import Footer from "../Footer/Footer"
+import ScrollToTop from '../../components/ScrollToTop/ScrollToTop'
 
 const Fullpage = () => {
   return (
@@ -14,6 +15,7 @@ const Fullpage = () => {
       <Skills/>
       <Projects/>
     <Education/>
+    <ScrollToTop/>
     <Footer/>
     </>
   )

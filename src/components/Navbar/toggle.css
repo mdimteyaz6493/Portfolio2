@@ -1,13 +1,14 @@
 /* From Uiverse.io by namecho */ 
 .switch {
  --button-width: 3.5em;
- --button-height: 2em;
- --toggle-diameter: 1.5em;
+ --button-height: 1.5em;
+ --toggle-diameter: 1.2em;
  --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
- --toggle-shadow-offset: 10px;
- --toggle-wider: 3em;
+ --toggle-shadow-offset: 8px;
+ --toggle-wider: 2em;
  --color-grey: #cccccc;
- --color-green: #4296f4;
+ --color-green: #0f325b;
+ cursor: pointer;
 }
 
 .slider {

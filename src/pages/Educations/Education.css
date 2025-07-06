@@ -1,25 +1,35 @@
 .education-section {
-  background: linear-gradient(to right, #0b0b2a, #131334);
-  color: white;
+  background: linear-gradient(to right, #f9f9f9, #eaeaea);
+  color: #111;
   padding: 60px 30px;
   min-height: 100vh;
+}
+.education-section.dark{
+background: linear-gradient(to right, #0b0b2a, #131334);
+  color: white;
 }
 
 .edu-title {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 50px;
-  color: #61dafb;
+   color: #0077cc;
+
+}
+.education-section.dark .edu-title{
+ color: #61dafb;
 }
 
 .timeline {
   position: relative;
   margin: 0 auto;
   padding-left: 25px;
-  max-width: 700px;
-  border-left: 3px solid #61dafb;
+  max-width: 520px;
+  border-left: 3px solid #0077cc;
 }
-
+.education-section.dark .timeline{
+ border-left: 3px solid #61dafb;
+}
 .timeline-item {
   position: relative;
   margin-bottom: 40px;
@@ -32,21 +42,27 @@
   top: 0px;
   width: 18px;
   height: 18px;
-  background: #61dafb;
   border-radius: 50%;
-  border: 3px solid white;
+   background: #0077cc;
+  border: 3px solid #fff;
   z-index: 1;
 }
-
+.education-section.dark .timeline-dot{
+  background: #61dafb;
+  border: 3px solid white;
+}
 .timeline-content {
-  background-color: #1f1f3d;
+background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s;
   width: 500px;
 }
-
+.education-section.dark .timeline-content{
+   background-color: #1f1f3d;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
 .timeline-content:hover {
   transform: translateY(-5px);
 }
@@ -54,26 +70,34 @@
 .timeline-content h3 {
   margin: 0;
   font-size: 1.3rem;
+   color: #4b0082;
+}
+.education-section.dark .timeline-content h3{
   color: #bb86fc;
 }
-
 .edu-institution {
   display: block;
   margin: 5px 0;
-  color: #ccc;
+    color: #444;
 }
-
+.education-section.dark .edu-institution{
+ color: #ccc;
+}
 .edu-year {
   font-size: 0.9rem;
-  color: #aaa;
+  color: #777;
 }
-
+.education-section.dark .edu-year{
+ color: #aaa;
+}
 .edu-marks {
   font-weight: bold;
-  color: #61dafb;
+   color: #0077cc;
   margin: 10px 0 5px;
 }
-
+.education-section.dark .edu-marks{
+  color: #61dafb;
+}
 @media (max-width: 600px) {
   .timeline {
     padding-left: 15px;

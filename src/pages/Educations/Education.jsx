@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Education.css";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { useTheme } from "../../Context/ThemeContext";
 
 
 const educationData = [
@@ -42,8 +43,10 @@ const Education = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+ const { darkMode } = useTheme(); // ✅ Get darkMode
+
   return (
-    <section className="education-section">
+    <section className={`education-section ${darkMode ? "dark" : ""}`}>
       <h2 className="edu-title">🎓 My Education</h2>
       <div className="timeline">
         {educationData.map((edu, index) => (

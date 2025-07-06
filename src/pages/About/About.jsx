@@ -2,6 +2,8 @@ import React from "react";
 import "./About.css";
 import AboutCard from "../About/AboutCard";
 import { useTheme } from "../../Context/ThemeContext";
+import { motion } from "framer-motion";
+
 
 const About = () => {
 
@@ -10,13 +12,24 @@ const About = () => {
   return (
     <div className={`about-container ${darkMode ? "dark" : ""}`}>
       {/* Left: Image */}
-      <div className="about-left">
-        <img src="./hero.png" alt="profile" className="about-img" />
-      </div>
+      <motion.div
+                className="about-left"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+              >
+          <img src="./hero2.png" alt="profile" className="about-img" />
+        </motion.div>
 
       {/* Right: Text and Cards */}
-      <div className="about-right">
-        <h2 className="about-title">Web Developer & UI Designer</h2>
+      
+        <motion.div
+                className="about-right"
+                initial={{ y: -80, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                 <h2 className="about-title">Web Developer & UI Designer</h2>
         <p className="about-desc">
           I’m a passionate web developer focused on crafting clean, creative,
           and user-friendly websites. I enjoy turning ideas into interactive
@@ -34,7 +47,8 @@ const About = () => {
           <AboutCard title="Name" content="Md. Imteyaz Alam" />
           <AboutCard title="Email" content="mdimteyaz6493@gmail.com" />
         </div>
-      </div>
+              </motion.div>
+       
     </div>
   );
 };

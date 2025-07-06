@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { useTheme } from "../../Context/ThemeContext"; // ✅ Add this
 import "./home.css";
+import {Link} from "react-router-dom"
 
 function App() {
   const { darkMode } = useTheme(); // ✅ Get darkMode
@@ -20,7 +21,7 @@ function App() {
           <h2>
             Hi, I'm <span>Md Imteyaz</span>
           </h2>
-          <h3 style={{ color: "red" }}>
+          <h3>
             <TypeAnimation
               sequence={[
                 "WEB DEVELOPER . ",
@@ -39,12 +40,12 @@ function App() {
             A passionate Web Developer crafting modern, responsive, and user-friendly web experiences with a focus on performance, accessibility, and clean design. Dedicated to turning ideas into innovative, functional, and visually appealing digital solutions.
           </p>
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">
-              Hire Me
+            <a href="https://drive.google.com/file/d/1Vy8uVxZjRZMkB3-LxioqDqPu6M2QjSS1/view" className="btn btn-primary" target="blank">
+              Download CV
             </a>
-            <a href="#projects" className="btn btn-outline">
+            <Link to="/projects" className="btn btn-outline">
               My Work
-            </a>
+            </Link>
           </div>
 
           <motion.div
@@ -60,7 +61,7 @@ function App() {
             >
               <FaGithub />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/imteyaz-alam-b835032ab/" target="_blank" rel="noreferrer">
               <FaLinkedin />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noreferrer">

@@ -4,11 +4,9 @@ import './Projects.css';
 import projectData from './ProjectData';
 import { motion } from 'framer-motion';
 import { useLocation } from "react-router-dom";
-
+import { useTheme } from "../../Context/ThemeContext";
 
 const filterOptions = ['All', 'Frontend', 'Mern'];
-
-
 
 const Projects = () => {
   const [selected, setSelected] = useState('All');
@@ -18,13 +16,15 @@ const Projects = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  const { darkMode } = useTheme(); // ✅ Get darkMode
+
   const filteredProjects =
     selected === 'All'
       ? projectData
       : projectData.filter((p) => p.category === selected);
 
   return (
-    <section className="projects-section">
+    <section className={`projects-section ${darkMode ? "dark" : ""}`}>
      <motion.h2
   className="projects-title"
   initial={{ opacity: 0, y: -40 }}
