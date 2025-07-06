@@ -30,7 +30,7 @@ height: calc(100vh - 60px);
 }
 
 .hero.dark{
-  background-color: #121c3c;
+ background: linear-gradient(to right, #0a0a23, #1a1a40);
 }
 .hero-text{
     /* background-color: orange; */
@@ -69,9 +69,10 @@ height: calc(100vh - 60px);
   margin-bottom: 25px;
   max-width: 500px;
   text-align: start;
+  color: #444;
 }
 .hero.dark .hero-text p{
-  color: rgb(137, 137, 137);
+  color: rgb(255, 255, 255);
 }
 .hero-buttons {
   display: flex;
@@ -131,9 +132,10 @@ background-color: #ffffff;
 
 /* Hero Image */
 .hero-img img {
- height: 650px;
- width: 100%;
- object-fit:scale-down;
+  height: 650px;
+  width: 100%;
+  object-fit: scale-down;
+  filter: drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
 /* Social Links */

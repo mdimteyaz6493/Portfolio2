@@ -1,0 +1,113 @@
+.skills-section {
+ background: linear-gradient(to right, #ffffff, #f0f4f8);
+  color: #0a0a23;
+  padding: 60px 30px;
+  min-height: calc(100vh - 60px); 
+  text-align: center;
+}
+
+.skills-section.dark {
+ background: linear-gradient(to right, #060617, #131334);
+  color: #fff;
+}
+
+.skills-title {
+  margin-bottom: 40px;
+}
+.skills-title h2{
+    font-size: 2.2rem;
+    color: #0a0a23;
+    margin-bottom: 20px;
+}
+
+.skills-section.dark .skills-title h2{
+   color: #61dafb;
+}
+
+.skills-title span{
+    color: #050505;
+}
+.skills-section.dark .skills-title span{
+    color: #ffffff;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.skill-card {
+ background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 400px;
+  height: 400px;
+  transition: transform 0.3s ease;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.skills-section.dark .skill-card{
+    background-color: #1f1f3d;
+     box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.skill-card:hover {
+  transform: translateY(-6px);
+}
+
+.skill-card h3 {
+   color: #4b0082;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+.skills-section.dark .skill-card h3{
+     color: #bb86fc;
+}
+.skill-item {
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+   color: #333;
+}
+.skills-section.dark .skill-label{
+     color: #ffffff;
+}
+.skill-bar {
+   background: #d0d0e0;
+  border-radius: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+.skills-section.dark .skill-bar{
+      background: #2c2c4f;
+}
+.skill-fill {
+  height: 100%;
+   background-color: #4b0082;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.5s ease;
+}
+.skills-section.dark .skill-fill{
+     background-color: #61dafb;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-section {
+  padding: 60px 25px;
+}
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-card {
+  border-radius: 10px;
+  padding: 25px 20px;
+  width: 100%;
+}
+
+}

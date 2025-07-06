@@ -1,0 +1,136 @@
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 60px); 
+  background: linear-gradient(to right, #ffffff, #f0f4f8);
+  color: #222;
+  padding: 60px 40px;
+  gap: 40px;
+}
+
+.about-container.dark{
+ background: linear-gradient(to right, #0a0a24, #131334);
+  color: #fff;
+}
+
+.about-left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.about-img {
+ height: 500px;
+  width: 100%;
+  object-fit: scale-down;
+filter: drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.about-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: orange; */
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #0a0a23;
+  margin-bottom: 20px;
+}
+.about-container.dark .about-title{
+color: #61dafb;
+}
+.about-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 700px;
+color: #333;
+
+}
+.about-container.dark .about-desc{
+color: white;
+}
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-card {
+background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 200px;
+  width: auto;
+  transition: transform 0.3s ease, background 0.3s;
+}
+.about-container.dark .about-card{
+background-color: #1f1f3d;
+}
+.about-card:hover {
+  transform: translateY(-8px);
+   background-color: #e0e0e0;
+}
+.about-container.dark .about-card:hover{
+ background-color: #2c2c4f;
+}
+.about-card h3 {
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+.about-container.dark .about-card h3{
+ color: #bb86fc;
+}
+.about-card p {
+  font-size: 0.95rem;
+    color: #444;
+
+}
+.about-container.dark .about-card p{
+ color: #ddd;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .about-right {
+    text-align: center;
+  }
+.about-img {
+ height: 300px;
+  width: 100%;
+  object-fit: scale-down;
+filter: drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.5));
+}
+  .card-wrapper {
+    justify-content: center;
+  }
+
+  .about-desc {
+  font-size: 1rem;
+ 
+  max-width: 100%;
+  text-align: start;
+color: #333;
+
+}
+.about-card {
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 160px;
+  width: 160px;
+  transition: transform 0.3s ease, background 0.3s;
+  overflow: hidden;
+  text-align: start;
+}
+}
